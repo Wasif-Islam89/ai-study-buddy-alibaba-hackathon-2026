@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #138883;
+  --color-primary-hover: #0F716D;
+  --color-primary-light: #E5F4F2;
+  --color-primary-muted: rgba(19, 136, 131, 0.08);
+
+  --color-navy: #244A67;
+  --color-navy-dark: #193A52;
+  --color-navy-light: #E7EFF4;
+
+  --color-teal: #138883;
+  --color-teal-hover: #0F716D;
+  --color-teal-light: #E5F4F2;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-card: 14px;
+  --radius-btn: 10px;
+}
+
+:root {
+  /* Official Brand Navy + Teal SaaS Palette (Light Mode) */
+  --color-navy: #244A67;
+  --color-navy-dark: #193A52;
+  --color-navy-light: #E7EFF4;
+  --color-navy-text: #244A67;
+
+  --color-teal: #138883;
+  --color-teal-hover: #0F716D;
+  --color-teal-bg: #E5F4F2;
+  --color-teal-text: #0E6D69;
+
+  /* Neutrals */
+  --color-bg-base: #F3F6F8;
+  --color-surface-card: #FFFFFF;
+  --color-surface-secondary: #EAF0F4;
+  --color-border: #DFE7EC;
+  --color-border-subtle: #EDF3F7;
+
+  /* Typography */
+  --color-text-main: #172B3A;
+  --color-text-muted: #617486;
+  --color-text-subtle: #899CAD;
+
+  /* App Shell */
+  --color-sidebar-bg: #FFFFFF;
+  --color-sidebar-border: #DFE7EC;
+  --color-header-bg: rgba(243, 246, 248, 0.85);
+
+  /* Primary Interactive Action (Teal for primary buttons, focus, and interactive states) */
+  --primary: #138883;
+  --primary-hover: #0F716D;
+  --primary-dark: #0F716D;
+  --primary-light: #E5F4F2;
+  --primary-muted: rgba(19, 136, 131, 0.08);
+
+  /* Semantic Status Colors (strictly distinct from Teal) */
+  --color-status-success: #16A34A;
+  --color-status-success-bg: #EAF8EE;
+  --color-status-success-text: #15803D;
+
+  --color-amber: #D97706;
+  --color-amber-bg: #FEF3C7;
+  --color-amber-text: #92400E;
+
+  --color-error: #DC2626;
+  --color-error-bg: #FEE2E2;
+  --color-error-text: #B91C1C;
+
+  /* Subtle Crisp Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(23, 43, 58, 0.04);
+  --shadow-card: 0 1px 3px 0 rgba(23, 43, 58, 0.05), 0 1px 2px -1px rgba(23, 43, 58, 0.05);
+  --shadow-card-hover: 0 4px 6px -1px rgba(23, 43, 58, 0.07), 0 2px 4px -2px rgba(23, 43, 58, 0.05);
+  --shadow-dropdown: 0 10px 25px -5px rgba(23, 43, 58, 0.08), 0 8px 10px -6px rgba(23, 43, 58, 0.06);
+}
+
+[data-theme="dark"],
+.dark {
+  /* Official Brand Navy + Teal SaaS Palette (Dark Mode) */
+  --color-navy: #355C7D;
+  --color-navy-dark: #244A67;
+  --color-navy-light: rgba(53, 92, 125, 0.25);
+  --color-navy-text: #9AC2E6;
+
+  --color-teal: #22B4AC;
+  --color-teal-hover: #1AA39A;
+  --color-teal-bg: rgba(34, 180, 172, 0.15);
+  --color-teal-text: #3CD0C7;
+
+  /* Neutrals */
+  --color-bg-base: #111C26;
+  --color-surface-card: #192936;
+  --color-surface-secondary: #203342;
+  --color-border: #2B414F;
+  --color-border-subtle: #223746;
+
+  /* Typography */
+  --color-text-main: #EAF1F6;
+  --color-text-muted: #95A7B7;
+  --color-text-subtle: #6E8294;
+
+  /* App Shell */
+  --color-sidebar-bg: #14212D;
+  --color-sidebar-border: #243948;
+  --color-header-bg: rgba(17, 28, 38, 0.85);
+
+  /* Primary Interactive Action (Teal) */
+  --primary: #22B4AC;
+  --primary-hover: #1AA39A;
+  --primary-dark: #1AA39A;
+  --primary-light: rgba(34, 180, 172, 0.18);
+  --primary-muted: rgba(34, 180, 172, 0.12);
+
+  /* Semantic Status Colors (strictly distinct from Teal) */
+  --color-status-success: #22C55E;
+  --color-status-success-bg: rgba(34, 197, 94, 0.15);
+  --color-status-success-text: #4ADE80;
+
+  --color-amber: #F59E0B;
+  --color-amber-bg: rgba(245, 158, 11, 0.15);
+  --color-amber-text: #FBBF24;
+
+  --color-error: #EF4444;
+  --color-error-bg: rgba(239, 68, 68, 0.15);
+  --color-error-text: #F87171;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.45), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-dropdown: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-subtle);
+  opacity: 1;
+}
+
+select option {
+  background-color: var(--color-surface-card);
+  color: var(--color-text-main);
+}
+
+::selection {
+  background-color: var(--color-teal-bg);
+  color: var(--color-teal-text);
+}
+
+[data-theme="dark"] ::selection,
+.dark ::selection {
+  background-color: rgba(34, 180, 172, 0.35);
+  color: #EAF1F6;
+}
+
+/* Custom scrollbar matching design system */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-subtle);
+}
